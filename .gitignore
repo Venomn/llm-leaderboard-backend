@@ -3,3 +3,5 @@ uploads
 database.sqlite
 
 node_modules
+
+*.pem
