@@ -4,7 +4,7 @@ import modlesRouter from './routes/modles';
 import issuesRouter from './routes/issues';
 // Create Express app
 const app = express();
-const PORT = 3001; // or 3000
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors()); // Enable CORS for all routes
@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on port: ${PORT}`);
 });
